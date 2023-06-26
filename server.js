@@ -8,6 +8,7 @@ const mongoose = require("mongoose");
 const passport = require("passport");
 const flash = require("connect-flash");
 const session = require("express-session");
+const cors = require("cors");
 // Passport Config
 require("./config/passport")(passport);
 
@@ -21,6 +22,7 @@ app.use(
     saveUninitialized: true,
   })
 );
+app.use(cors());
 dotenv.config({ path: "config.env" });
 const PORT = process.env.PORT || 8080;
 // Passport middleware
@@ -64,8 +66,9 @@ app.listen(PORT, () => {
 });
 
 // Connect to MongoDB
-const db = process.env.MONGO_URI;
+// const db = process.env.MONGO_URI;
 
+const db = "mongodb+srv://test:test123@cluster0.6ucttxt.mongodb.net/'";
 mongoose
   .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("MongoDB Connected"))
