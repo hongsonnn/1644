@@ -10,7 +10,7 @@ const User = require("../model/User");
 const {
   ensureAuthenticated,
   forwardAuthenticated,
-} = require("C:/Users/ASUS/Desktop/Coding/Completed/config/auth.js");
+} = require("../../config/auth.js");
 // Login Page
 router.get("/login", forwardAuthenticated, (req, res) => res.render("login"));
 
