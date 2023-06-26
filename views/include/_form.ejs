@@ -1,0 +1,39 @@
+ <!-- form handling -->
+ <form action="/api/products" method="POST" id="add_product">
+    <div class="new_product">
+        <div class="form-group">
+            <label for="name" class="text-light">Name</label>
+            <input type="hidden" name="id" value="">
+            <input type="text" name="name" value="" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="type" class="text-light">Type</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-2" name="type" value="Boy" >
+                <label for="radio-2" class="radio-label">Boy</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-3" name="type" value="Girl" >
+                <label for="radio-3" class="radio-label">Girl</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-4" name="type" value="Unisex" >
+                <label for="radio-4" class="radio-label">Unisex</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="price" class="text-light">Price</label>
+            <input type="text" name="price" value="" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="img" class="text-light">Image URL</label>
+            <input type="text" name="img" value="" placeholder="">
+        </div>      
+
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Save</button>
+        </div>
+
+    </div>
+</form>

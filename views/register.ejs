@@ -1,0 +1,29 @@
+<%- include('homeInclude/_header') %>
+    <div class="container" style="padding-bottom:100px;">
+        <form action="/register" method="POST" style="border:1px solid #ccc">
+            <div class="container">
+                <h1>Đăng ký</h1>
+                <p>Chào mừng đến với ATN toy store</p>
+                <%- include('partials/messages') %>
+                    <hr>
+
+                    <label for="name"><b>Tên</b></label>
+                    <input type="text" placeholder="Nhập tên" name="name" required>
+
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Nhập Email" name="email" required>
+
+                    <label for="password"><b>Nhập password</b></label>
+                    <input type="password" placeholder="Nhập lại Password" name="password" required>
+
+                    <label for="password"><b>Nhập lại Password</b></label>
+                    <input type="password" placeholder="Nhập lại Password" name="password2" required>
+                    <p>Chưa có tài khoản bấm vào đây
+                        <a href="/login" style="color: #f44336;">Đăng nhập</a>.</p>
+                    <div class="clearfix">
+                        <button type="submit" class="signupbtn" style="width: 100%;">Đăng ký</button>
+                    </div>
+            </div>
+        </form>
+    </div>
+    <%- include('homeInclude/_footer') %>

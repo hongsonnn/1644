@@ -1,0 +1,62 @@
+<%- include('homeInclude/_header') %>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+        * {
+            font-family: 'Titillium Web', sans-serif;
+        }
+        
+        .product {
+            border: 1px solid black;
+            margin: -1px 19px 3px -1px;
+            padding: 10px;
+            text-align: center;
+            background-color: #efefef;
+        }
+        
+        table,
+        th,
+        tr {
+            text-align: center;
+        }
+        
+        .title2 {
+            text-align: center;
+            color: #66afe9;
+            background-color: #efefef;
+            padding: 2%;
+        }
+        
+        .table-responsive {
+            position: relative;
+            margin-top: 3%;
+            margin-left: 20%;
+            width: 60%;
+            color: black;
+            text-align: center;
+        }
+    </style>
+
+    <body>
+        <div class="container">
+            <h1>Giỏ hàng</h1>
+            <form action="/" method="POST">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Product Name</th>
+                            <th>Quantity</th>
+                            <th>Price Details</th>
+                            <th>Total Price</th>
+                            <th>Remove Item</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%- include('include/cart_show') %>
+                    </tbody>
+                </table>
+            </form>
+            <h2 style="text-align: center;"><input type="submit" name="add" style="width: 150px;padding: 1px 2px; background-color: orange;" class="btn btn-success" value="Xuất hóa đơn"></h2>
+        </div>
+    </body>
+    <%- include('homeInclude/_footer') %>

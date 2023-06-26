@@ -1,0 +1,14 @@
+<% for(var i = 0; i < orders.length; i++) { %>
+    <tr>
+        <td><%= i + 1 %></td>
+        <td><%= orders[i].name %></td>
+        <td><%= orders[i].quantity %></td>
+        <td><%= orders[i].price %></td>
+        <td><%= orders[i].total %></td>
+        <td>
+            <a class="btn border-shadow delete" data-id=<%= orders[i]._id%> >
+                <span class="text-gradient"><i class="fas fa-times"></i></span>
+            </a>
+        </td>
+    </tr>
+    <% } %>
